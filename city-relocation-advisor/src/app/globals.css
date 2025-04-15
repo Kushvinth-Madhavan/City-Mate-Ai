@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #111827;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom styles for markdown content */
+.markdown-content {
+  @apply text-sm sm:text-base;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+  @apply font-bold my-3;
+}
+
+.markdown-content h1 {
+  @apply text-2xl;
+}
+
+.markdown-content h2 {
+  @apply text-xl;
+}
+
+.markdown-content h3 {
+  @apply text-lg;
+}
+
+.markdown-content ul {
+  @apply list-disc pl-5 my-2;
+}
+
+.markdown-content ol {
+  @apply list-decimal pl-5 my-2;
+}
+
+.markdown-content li {
+  @apply my-1;
+}
+
+.markdown-content strong {
+  @apply font-bold;
+}
+
+.markdown-content a {
+  @apply text-blue-400 underline;
+}
+
+.markdown-content p {
+  @apply my-2;
+}
+
+.markdown-content table {
+  @apply w-full border-collapse my-4;
+}
+
+.markdown-content th,
+.markdown-content td {
+  @apply border border-gray-600 p-2;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-gray-500 pl-4 italic my-4;
+}
+
+.markdown-content pre {
+  @apply bg-gray-700 p-3 rounded-md overflow-x-auto my-4;
+}
+
+.markdown-content code {
+  @apply bg-gray-700 px-1 py-0.5 rounded;
+}
+
+@keyframes progress-bar {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-progress-bar {
+  animation: progress-bar 2s ease-in-out forwards;
+}
+
+/* Enhanced bounce animation for loading dots */
+@keyframes enhanced-bounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+
+.animate-bounce {
+  animation: enhanced-bounce 1s infinite;
+}
