@@ -8,11 +8,11 @@ export class RateLimiter {
   private readonly refillInterval: number;
 
   constructor() {
-    this.maxTokens = apiConfig.rateLimit.burstSize;
+    this.maxTokens = apiConfig.rateLimit.maxTokens;
     this.tokens = this.maxTokens;
     this.lastRefill = Date.now();
     this.refillRate = apiConfig.rateLimit.refillRate;
-    this.refillInterval = 1000; // 1 second in milliseconds
+    this.refillInterval = apiConfig.rateLimit.refillInterval;
   }
 
   private refillTokens(): void {
