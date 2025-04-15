@@ -60,6 +60,7 @@ SERPER_API_KEY=your_serper_api_key
 NEWS_API_KEY=your_news_api_key
 JINA_API_KEY=your_jina_api_key
 RADAR_API_KEY=your_radar_api_key
+GEMINI_API_KEY=your_gemini_api_key
 ```
 
 ---
@@ -95,6 +96,7 @@ const apiCalls = [
   getWebSearchResults(),    // 🔍 Serper
   getCityNews(),            // 🗞️ News API
   getContentSummaries()     // 📚 Jina AI
+  getVectorEmbeddings()     // 🧠 Gemini Embeddings
 ];
 ```
 
