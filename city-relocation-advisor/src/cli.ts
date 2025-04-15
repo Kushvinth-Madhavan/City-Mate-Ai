@@ -55,7 +55,7 @@ function promptUser() {
     
     try {
       // Process the message
-      const response = await processMessage(userId, messages, input);
+      const response = await processMessage(input, userId);
       
       // Add user message and response to history
       const userMessage: Message = {
@@ -66,10 +66,15 @@ function promptUser() {
       };
       
       messages.push(userMessage);
-      messages.push(response);
+      messages.push({
+        id: uuidv4(),
+        role: 'assistant',
+        content: response.text,
+        createdAt: new Date()
+      });
       
       // Display the response
-      console.log(`\nCityMate: ${response.content}\n`);
+      console.log(`\nCityMate: ${response.text}\n`);
     } catch (error) {
       console.error('Error processing message:', error);
       console.log('\nCityMate: I apologize, but I encountered an error. Please try again or rephrase your question.\n');
