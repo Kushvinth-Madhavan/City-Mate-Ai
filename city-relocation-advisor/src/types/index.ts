@@ -19,6 +19,7 @@ export interface QueryContext {
     budget?: number;
     housingType?: string[];
     jobIndustry?: string[];
+  };
 }
 
 // Query Processing Options type
