@@ -35,7 +35,7 @@
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/Kushvinth-Madhavan/Submission-Crayo.git
+git clone https://github.com/Kushvinth-Madhavan/City-Mate-Ai
 
 # 2. Install dependencies
 cd city-relocation-advisor
