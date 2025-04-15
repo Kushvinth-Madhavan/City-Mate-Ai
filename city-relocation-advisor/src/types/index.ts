@@ -110,6 +110,7 @@ export interface NeighborhoodData extends BaseApiResponse {
       name: string;
       description?: string;
       type?: string;
+      source?: string;
     };
   }>;
   context?: any;
